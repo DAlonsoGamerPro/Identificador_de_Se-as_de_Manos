@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identificador de Manos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="container">
+        <center>
+            <h1 class="btn btn-warning heading">Aplicación de Seña a Emoji
+                <br>
+                <span>&#128077</span>
+                <span>&#128076</span>
+                <span>&#9996</span>
+            </h1>
+                <br><br>
+                <p style="font-size: 22px;">Haz una seña con la mano para emparejarla con un emoji</p>
+
+                <br>
+                <b style="color: yellow;">¿Pulgar arriba?</b>
+                <b style="color: rgb(106, 255, 101);">¿Perfecto?</b>
+                <b style="color: rgb(255, 0, 0);">¿Paz y amor?</b>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <label>Vista de la cámara</label>
+                    <div id="camera"></div>
+                    <br><br>
+                    <button onclick="take_photo();" class="btn btn-warning">Capturar Imagen</button>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <label>Parecido 1- </label>
+                    <p class="emotion_name" id="result_emotion_name"></p>
+                    <p class="emoji" id="update_emoji"></p>
+                    <label>Parecido 2- </label>
+                    <p class="emotion_name2" id="result_emotion_name2"></p>
+                    <p class="emoji" id="update_emoji2"></p>
+                </div>
+
+                <div class="col-md-4 col-sm-12 col-xs-12">
+                    <label>Resultado - </label>
+                    <div id="result"></div>
+                    <br><br>
+                    <button onclick="check();" class="btn btn-success">Transformar Foto a Emoji</button>
+                </div>
+        </center>
+    </div>
+</body>
+<script src="main.js"></script>
+</html>
